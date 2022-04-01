@@ -11,57 +11,45 @@ public class DibujoCartesianas {
     //Método a modificar. x e y están entre 0 y 1.
     //El origen (0,0) está en la esquina inferior izquierda
 
-    public static Color crear3franjas(double x, double y) {
-        if (x < 0.33) {
-            return new Color(255, 4, 28);
-        }
-        if (x < 0.66 && x > 0.33) {
-            return new Color(0, 0, 0);
-        }
 
-        if (x < 1 && x > 0.66) {
-            return new Color(241, 255, 29);
-        }
-
-
-        return new Color(0, 0, 0);
-    }
-
-    public static Color crear3columnas(double x, double y) {
-        if (y < 0.33) {
-            return new Color(255, 4, 28);
-        }
-        if (y < 0.66 && y > 0.33) {
-            return new Color(0, 0, 0);
-        }
-
-        if (y < 1 && y > 0.66) {
-            return new Color(241, 255, 29);
-        }
-
-
-        return new Color(0, 0, 0);
-    }
 
 
     private static Color devuelveColor(double x, double y) {
-        if (x < 0.23) {
-            return new Color(5, 11, 198);
-        }
 
+        if (x > 0.40 && y < 0.50) {
+            return new Color(251, 9, 9);
+        }
+        if (x > 0.40 && y > 0.50) {
+            return new Color(4, 75, 255);
+        }
+        if (y < 0.11 && y > 0) {
+            return new Color(251, 247, 9);
+        }
         if (y < 0.22 && y > 0.11) {
-            return new Color(198, 11, 30);
+            return new Color(251, 9, 9);
+        }
+        if (y < 0.33 && y > 0.22) {
+            return new Color(251, 247, 9);
         }
         if (y < 0.44 && y > 0.33) {
-            return new Color(198, 11, 30);
+            return new Color(251, 9, 9, 255);
+        }
+        if (y < 0.55 && y > 0.44) {
+            return new Color(251, 247, 9);
         }
         if (y < 0.66 && y > 0.55) {
-            return new Color(198, 11, 30);
+            return new Color(251, 9, 9);
+        }
+        if (y < 0.77 && y > 0.66) {
+            return new Color(251, 247, 9);
         }
         if (y < 0.88 && y > 0.77) {
-            return new Color(198, 11, 30);
+            return new Color(251, 9, 9);
         }
-        return new Color(247, 244, 30);
+        if (y < 1 && y > 0.88) {
+            return new Color(251, 247, 9);
+        }
+        return new Color(4, 75, 255);
     }
 
 
